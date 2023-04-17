@@ -86,7 +86,7 @@ public class Main {
                 {"Getafe", "6", "2", "4", "7", "5"},
                 {"Real Madrid", "6", "8", "9", "5", "9"},
                 {"Celta", "6", "3", "3", "4", "9"},
-                {"Getafe", "6", "2", "4", "7", "5"}
+                {"Getafe", "6", "2", "4", "7", "5"},
         };
 
         //Creación del panel principal donde irá el ScrollPane, que a su vez contendrá la tabla
@@ -94,11 +94,12 @@ public class Main {
         //Creación de la tabla con el nombre de las columnas y los datos de prueba
         JTable tabla = new JTable(datos, nombresColumnas);
         JScrollPane scrollTabla = new JScrollPane(tabla);
-        scrollTabla.setBounds(200, 10, 700, 500);
+        scrollTabla.setBounds(350, 40, 300, 200);
         panelTabla.add(scrollTabla);
         ventana.add(panelTabla);
 
 
+        //test
         ventana.setVisible(true);
         ventana.setResizable(false); //se deshabilita la redimensión de la ventana
 
