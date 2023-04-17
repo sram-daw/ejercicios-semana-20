@@ -1,7 +1,13 @@
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.JTableHeader;
 import javax.swing.table.TableColumn;
 import java.awt.*;
+import javax.swing.table.*;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.JFrame;
 
 public class Main {
     public static void main(String[] args) {
@@ -89,17 +95,19 @@ public class Main {
                 {"Getafe", "6", "2", "4", "7", "5"},
         };
 
-        //Creación del panel principal donde irá el ScrollPane, que a su vez contendrá la tabla
-        JPanel panelTabla = new JPanel();
-        //Creación de la tabla con el nombre de las columnas y los datos de prueba
-        JTable tabla = new JTable(datos, nombresColumnas);
-        JScrollPane scrollTabla = new JScrollPane(tabla);
-        scrollTabla.setBounds(350, 40, 300, 200);
-        panelTabla.add(scrollTabla);
-        ventana.add(panelTabla);
+        //Creación de la tabla
+        JTable tabla = new JTable();
+        //Creacion del encabezado de la tabla
+        JTableHeader header = tabla.getTableHeader();
+        header.setBounds(600, 120, 800, 30);
+        tabla.setTableHeader(header);
+        DefaultTableModel modeloTabla= new DefaultTableModel(nombresColumnas,22);
+        tabla.setModel(modeloTabla);
+        tabla.setBounds(600, 150, 800, 350);
+        ventana.add(tabla.getTableHeader());
+        ventana.add(tabla);
 
-
-        //test
+        ventana.setLayout(null); //importante para la correcta visualización del encabezado de la tabla
         ventana.setVisible(true);
         ventana.setResizable(false); //se deshabilita la redimensión de la ventana
 
