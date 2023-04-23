@@ -1,12 +1,8 @@
 import javax.swing.*;
-import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
-import javax.swing.table.TableColumn;
 import java.awt.*;
-import javax.swing.table.*;
 import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
 import javax.swing.JFrame;
 
 public class Main {
@@ -76,24 +72,6 @@ public class Main {
                 "Puntos"
         };
 
-        //Creación de matriz para los datos de prueba
-        Object[][] datos = {
-                {"Celta", "6", "3", "3", "4", "9"},
-                {"Getafe", "6", "2", "4", "7", "5"},
-                {"Real Madrid", "6", "8", "9", "5", "9"},
-                {"Celta", "6", "3", "3", "4", "9"},
-                {"Getafe", "6", "2", "4", "7", "5"},
-                {"Real Madrid", "6", "8", "9", "5", "9"},
-                {"Real Madrid", "6", "8", "9", "5", "9"},
-                {"Celta", "6", "3", "3", "4", "9"},
-                {"Getafe", "6", "2", "4", "7", "5"},
-                {"Real Madrid", "6", "8", "9", "5", "9"},
-                {"Celta", "6", "3", "3", "4", "9"},
-                {"Getafe", "6", "2", "4", "7", "5"},
-                {"Real Madrid", "6", "8", "9", "5", "9"},
-                {"Celta", "6", "3", "3", "4", "9"},
-                {"Getafe", "6", "2", "4", "7", "5"},
-        };
 
         //Creación de la tabla
         JTable tabla = new JTable();
